@@ -102,4 +102,31 @@ export default function About() {
       {/* Mission Section */}
       <section className="px-4 py-16 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+              <p className="text-lg text-gray-600">
+                At HealthTracker, our mission is to revolutionize the way people track their health. 
+                We believe that everyone deserves access to accurate, actionable data to make informed decisions about their well-being.
+              </p>
+            </div>
+            <div className="p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Team</h2>
+              <p className="text-lg text-gray-600">
+                Our team is made up of experts in health, technology, and design. 
+                We're committed to creating a platform that empowers users to take control of their health journey.
+              </p>
+            </div>
+            <div className="p-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h2>
+              <p className="text-lg text-gray-600">
+                At HealthTracker, we believe in transparency, collaboration, and innovation. 
+                We're dedicated to creating a platform that is accessible, user-friendly, and data-driven.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

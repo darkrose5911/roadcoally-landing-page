@@ -3,7 +3,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export const ScrollFloat = ({ 
+const ScrollFloat = ({ 
   children, 
   delay = 0, 
   direction = "up", 
@@ -79,3 +79,5 @@ export const ScrollFloat = ({
     </motion.div>
   );
 };
+
+export default ScrollFloat;

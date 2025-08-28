@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export const ScrollReveal = ({ 
+const ScrollReveal = ({ 
   children, 
   direction = 'up', 
   delay = 0, 
@@ -113,3 +113,5 @@ export const ScrollReveal = ({
     </div>
   );
 };
+
+export default ScrollReveal;

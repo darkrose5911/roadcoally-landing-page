@@ -2,7 +2,7 @@
 
 import { useRef, useEffect } from 'react';
 
-export const SmoothScrollWrapper = ({ children, className = '' }) => {
+const SmoothScrollWrapper = ({ children, className = '' }) => {
   const containerRef = useRef(null);
   const contentRef = useRef(null);
   const scrollVelocity = useRef(0);
@@ -122,3 +122,5 @@ export const SmoothScrollWrapper = ({ children, className = '' }) => {
     </div>
   );
 };
+
+export default SmoothScrollWrapper;

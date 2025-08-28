@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
-export const ShinyText = ({
+const ShinyText = ({
   children,
   className,
   shimmerWidth = 100,
@@ -54,3 +54,5 @@ export const ShinyText = ({
     </span>
   );
 };
+
+export default ShinyText;
