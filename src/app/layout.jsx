@@ -1,6 +1,7 @@
 import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
+import ScrollSmootherWrapper from "@/components/ScrollSmoother";
 import Script from "next/script";
 
 export const metadata = {
@@ -30,7 +31,10 @@ export default function RootLayout({ children }) {
           data-debug="true"
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
-        {children}
+        <ScrollSmootherWrapper>
+          {children}
+        </ScrollSmootherWrapper>
+        {/* Position fixed elements outside the smooth-wrapper */}
         <VisualEditsMessenger />
       </body>
     </html>

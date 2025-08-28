@@ -37,9 +37,9 @@ export default function Hero({ className = "", onOrderNow, onLearnMore }) {
               id="hero-heading"
               className="font-heading text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl xl:text-8xl"
             >
-              Drive the Future
+              Local Peer-Peer
               <br />
-              <span className="text-green-300">Today</span>
+              <span className="text-green-300">Delivery</span>
             </h1>
           </ScrollReveal>
 
