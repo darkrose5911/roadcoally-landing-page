@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import ScrollReveal from "@/components/animation/ScrollReveal";
-import ScrollFloat from "@/components/animation/ScrollFloat";
-import ShinyText from "@/components/animation/ShinyText";
+import ScrollReveal from "@/components/ScrollReveal";
+import ScrollFloat from "@/components/ScrollFloat";
+import ShinyText from "@/components/ShinyText";
 
 export default function Hero({ className = "", onOrderNow, onLearnMore }) {
   const handleLearnMore = () => {
