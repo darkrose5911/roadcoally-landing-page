@@ -226,3 +226,272 @@ export default function BecomeDriverPage() {
               <CardTitle className="text-2xl text-gray-900">Driver Application</CardTitle>
               <CardDescription className="text-lg">
                 Please provide accurate information for a faster review process
+              </CardDescription>
+            </CardHeader>
+            
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                {/* Personal Information */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Personal Information</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="firstName">First Name *</Label>
+                      <Input
+                        id="firstName"
+                        value={formData.firstName}
+                        onChange={(e) => handleInputChange('firstName', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="lastName">Last Name *</Label>
+                      <Input
+                        id="lastName"
+                        value={formData.lastName}
+                        onChange={(e) => handleInputChange('lastName', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email">Email Address *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div className="md:col-span-2">
+                      <Label htmlFor="address">Street Address *</Label>
+                      <Input
+                        id="address"
+                        value={formData.address}
+                        onChange={(e) => handleInputChange('address', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="city">City *</Label>
+                      <Input
+                        id="city"
+                        value={formData.city}
+                        onChange={(e) => handleInputChange('city', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="zipCode">ZIP Code *</Label>
+                      <Input
+                        id="zipCode"
+                        value={formData.zipCode}
+                        onChange={(e) => handleInputChange('zipCode', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Driver Information */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Driver Information</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="licenseNumber">Driver's License Number *</Label>
+                      <Input
+                        id="licenseNumber"
+                        value={formData.licenseNumber}
+                        onChange={(e) => handleInputChange('licenseNumber', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="experience">Driving Experience *</Label>
+                      <Select value={formData.experience} onValueChange={(value) => handleInputChange('experience', value)}>
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Select years of experience" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="2-5">2-5 years</SelectItem>
+                          <SelectItem value="5-10">5-10 years</SelectItem>
+                          <SelectItem value="10+">10+ years</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Vehicle Information */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Vehicle Information</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="vehicleYear">Vehicle Year *</Label>
+                      <Input
+                        id="vehicleYear"
+                        type="number"
+                        min="2010"
+                        max="2024"
+                        value={formData.vehicleYear}
+                        onChange={(e) => handleInputChange('vehicleYear', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="vehicleMake">Vehicle Make *</Label>
+                      <Input
+                        id="vehicleMake"
+                        value={formData.vehicleMake}
+                        onChange={(e) => handleInputChange('vehicleMake', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="vehicleModel">Vehicle Model *</Label>
+                      <Input
+                        id="vehicleModel"
+                        value={formData.vehicleModel}
+                        onChange={(e) => handleInputChange('vehicleModel', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="vehicleColor">Vehicle Color *</Label>
+                      <Input
+                        id="vehicleColor"
+                        value={formData.vehicleColor}
+                        onChange={(e) => handleInputChange('vehicleColor', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                    <div className="md:col-span-2">
+                      <Label htmlFor="insuranceProvider">Insurance Provider *</Label>
+                      <Input
+                        id="insuranceProvider"
+                        value={formData.insuranceProvider}
+                        onChange={(e) => handleInputChange('insuranceProvider', e.target.value)}
+                        required
+                        className="mt-2"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <Separator />
+
+                {/* Availability & Additional Info */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6">Availability & Additional Information</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <Label htmlFor="availability">Preferred Working Hours *</Label>
+                      <Select value={formData.availability} onValueChange={(value) => handleInputChange('availability', value)}>
+                        <SelectTrigger className="mt-2">
+                          <SelectValue placeholder="Select your preferred schedule" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="morning">Morning (6 AM - 12 PM)</SelectItem>
+                          <SelectItem value="afternoon">Afternoon (12 PM - 6 PM)</SelectItem>
+                          <SelectItem value="evening">Evening (6 PM - 12 AM)</SelectItem>
+                          <SelectItem value="night">Night (12 AM - 6 AM)</SelectItem>
+                          <SelectItem value="flexible">Flexible - Any time</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+                    <div>
+                      <Label htmlFor="additionalInfo">Additional Information</Label>
+                      <Textarea
+                        id="additionalInfo"
+                        value={formData.additionalInfo}
+                        onChange={(e) => handleInputChange('additionalInfo', e.target.value)}
+                        placeholder="Tell us anything else we should know about your application..."
+                        className="mt-2"
+                        rows={4}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center pt-8">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    disabled={isSubmitting}
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-12 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50"
+                  >
+                    {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Questions About Becoming a Driver?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Our driver support team is here to help you get started
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <Phone className="w-8 h-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600">(555) 123-4567</p>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <Mail className="w-8 h-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600">drivers@quickbite.com</p>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <MapPin className="w-8 h-8 text-orange-500" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600">123 Main St, City, State 12345</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

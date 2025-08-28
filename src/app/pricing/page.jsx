@@ -1,9 +1,9 @@
 "use client";
 
-import { BackgroundPattern } from "@/components/ui/background-pattern";
-import { SmoothScrollWrapper } from "@/components/ui/smooth-scroll-wrapper";
-import { ClickSpark } from "@/components/ui/click-spark";
-import { Header } from "@/components/ui/header";
+import BackgroundPattern from "@/components/BackgroundPattern";
+import SmoothScrollWrapper from "@/components/SmoothScrollWrapper";
+import { ClickSpark } from "@/components/ClickSpark";
+import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
